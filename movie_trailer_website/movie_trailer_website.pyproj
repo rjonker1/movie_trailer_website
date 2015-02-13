@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>31168595-24aa-4de6-8fce-913ddd93354d</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>app\html_setup.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>movie_trailer_website</Name>
+    <RootNamespace>movie_trailer_website</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <InterpreterId>{9a7a9026-48c1-4688-9d5d-e5699d47d074}</InterpreterId>
+    <InterpreterVersion>2.7</InterpreterVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
+    <Folder Include="app\bin\" />
+    <Folder Include="app\content\" />
+    <Folder Include="app\content\js\" />
+    <Folder Include="app\content\css\" />
+    <Folder Include="app\core\" />
+    <Folder Include="app\db\" />
+    <Folder Include="app\functions\" />
+    <Folder Include="app\views\" />
+    <Folder Include="app\utils\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="{9a7a9026-48c1-4688-9d5d-e5699d47d074}\2.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="app\core\media.py" />
+    <Compile Include="app\core\movie.py" />
+    <Compile Include="app\core\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\db\movie_database.py" />
+    <Compile Include="app\db\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\functions\generate_movie_page.py" />
+    <Compile Include="app\functions\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\html_setup.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\utils\html_for_movie_trailer.py" />
+    <Compile Include="app\utils\html_for_movie_trailer_builder.py" />
+    <Compile Include="app\utils\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\views\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Condition="Exists($(PtvsTargetsFile))" Project="$(PtvsTargetsFile)" />
+  <Import Condition="!Exists($(PtvsTargetsFile))" Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
