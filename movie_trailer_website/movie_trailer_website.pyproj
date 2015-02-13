@@ -32,7 +32,6 @@
     <Folder Include="app\" />
     <Folder Include="app\bin\" />
     <Folder Include="app\content\" />
-    <Folder Include="app\content\js\" />
     <Folder Include="app\content\css\" />
     <Folder Include="app\core\" />
     <Folder Include="app\db\" />

@@ -1,6 +1,4 @@
-import webbrowser
-import os
-import re
+import urlparse, urllib, re
 import html_for_movie_trailer
 import views.view_manager
 
@@ -28,9 +26,7 @@ class HtmlForMovieTrailerBuilder(html_for_movie_trailer.HtmlForMovieTrailer):
 
     def open_movies_page(self):
         # Create or overwrite the output file
-        dir = os.path.abspath(os.curdir)
-        movie_trailer_view = os.path.join(dir,r'app\views\movie_trailers.html')
-        #output_file = open(r'views\movie_trailers.html', 'w')
+        movie_trailer_view = views.view_manager.get_movie_trailer_web_page()
         output_file = open(movie_trailer_view,'w')
         
         # Replace the placeholder for the movie tiles with the actual dynamically generated content
@@ -41,8 +37,4 @@ class HtmlForMovieTrailerBuilder(html_for_movie_trailer.HtmlForMovieTrailer):
         output_file.close()
 
         # open the out file in the browser
-        #view_manager = views.view_manager.ViewManager()
-        #view_manager.open_movie_trailer_page_in_webbrowser()
-        url = os.path.abspath(output_file.name)
-        print('file://' + url)
-        webbrowser.open('file://' + url, new=2) # open in a new tab, if possible
+        views.view_manager.open_html_page_web_browser(output_file)
