@@ -2,6 +2,7 @@ import webbrowser
 import os
 import re
 import html_for_movie_trailer
+import views.view_manager
 
 class HtmlForMovieTrailerBuilder(html_for_movie_trailer.HtmlForMovieTrailer):
     """description of class"""
@@ -27,9 +28,7 @@ class HtmlForMovieTrailerBuilder(html_for_movie_trailer.HtmlForMovieTrailer):
 
     def open_movies_page(self):
         # Create or overwrite the output file
-        print os.path.abspath(os.curdir)
         dir = os.path.abspath(os.curdir)
-        print(dir)
         movie_trailer_view = os.path.join(dir,r'app\views\movie_trailers.html')
         #output_file = open(r'views\movie_trailers.html', 'w')
         output_file = open(movie_trailer_view,'w')
@@ -42,5 +41,8 @@ class HtmlForMovieTrailerBuilder(html_for_movie_trailer.HtmlForMovieTrailer):
         output_file.close()
 
         # open the out file in the browser
+        #view_manager = views.view_manager.ViewManager()
+        #view_manager.open_movie_trailer_page_in_webbrowser()
         url = os.path.abspath(output_file.name)
+        print('file://' + url)
         webbrowser.open('file://' + url, new=2) # open in a new tab, if possible

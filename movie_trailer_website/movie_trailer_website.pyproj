@@ -65,6 +65,9 @@
     <Compile Include="app\utils\__init__.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="app\views\view_manager.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="app\views\__init__.py">
       <SubType>Code</SubType>
     </Compile>

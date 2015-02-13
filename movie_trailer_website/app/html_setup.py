@@ -1,7 +1,5 @@
-import sys
 from core import movie
 from utils import html_for_movie_trailer_builder
-print(sys.path)
 
 
 a_clock_work_orange = movie.Movie("A Clockwork Orange", "In future Britain, charismatic delinquent Alex DeLarge is jailed and volunteers for an experimental aversion therapy developed by the government in an effort to solve society's crime problem - but not all goes according to plan.", "http://ia.media-imdb.com/images/M/MV5BMTY3MjM1Mzc4N15BMl5BanBnXkFtZTgwODM0NzAxMDE@._V1_SX640_SY720_.jpg", "https://www.youtube.com/watch?v=G7fO3bzPeBQ", "1999/01/01", "5")
