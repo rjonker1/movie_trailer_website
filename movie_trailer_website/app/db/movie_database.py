@@ -2,7 +2,10 @@ from core import movie
 from core import media
 
 class MovieDatabase():
-    """Movie database holding a list of all the movies. Includes functions to return movies by rating or the top six rated movies"""
+    """Movie database holding a list of all the movies. 
+    Functions include: 
+    get movies by a desired rating [get_movies_with_rating_by_rating(rating)
+    get top six rated movies existing in the database [get_top_six_rated_movies()]"""
     def __init__(self):
         self.movie_list = []
         self.movie_list.append(movie.Movie("A Clockwork Orange", "In future Britain, charismatic delinquent Alex DeLarge is jailed and volunteers for an experimental aversion therapy developed by the government in an effort to solve society's crime problem - but not all goes according to plan.", "http://mtv.mtvnimages.com/shared/media/images/acovers/standard/dra100/a175/a17588n7cit.jpg", "https://www.youtube.com/watch?v=G7fO3bzPeBQ", 1971, 5,"Stanley Kubrick"))
@@ -18,5 +21,5 @@ class MovieDatabase():
         return top_rated_movies[:6]
 
     def get_movies_with_rating_by_rating(self,rating):
-        top_movies_with_five_rating = [x for x in self.movie_list if x.rating >= rating] #get all the movies with a rating of 5
+        top_movies_with_five_rating = [x for x in self.movie_list if x.rating == rating] #get all the movies equal to the rating argument passed in
         return top_movies_with_five_rating

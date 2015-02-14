@@ -1,5 +1,9 @@
 class HtmlForMovieTrailer(object):
-    """description of class"""
+    """Holds static html to display Movie information. The CSS and Javascript files can be found in the content directory of this project.
+    There are three properties:
+    movie_page_head: html to display the head elements and includes links to style sheets and java script files
+    movie_page_content: html to display the main page body content within the body elements
+    movie_tile_content: html to hold information for each movie trailer's information """
     def __init__(self):
         self.movie_page_head = '''
 <head>

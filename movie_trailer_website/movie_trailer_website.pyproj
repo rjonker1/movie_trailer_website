@@ -53,7 +53,6 @@
     <Compile Include="app\db\__init__.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="app\functions\generate_movie_page.py" />
     <Compile Include="app\functions\__init__.py">
       <SubType>Code</SubType>
     </Compile>
@@ -78,7 +77,6 @@
   <ItemGroup>
     <Content Include="app\content\css\default.css" />
     <Content Include="app\content\js\common.js" />
-    <Content Include="app\views\WebPage1.html" />
   </ItemGroup>
   <Import Condition="Exists($(PtvsTargetsFile))" Project="$(PtvsTargetsFile)" />
   <Import Condition="!Exists($(PtvsTargetsFile))" Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />

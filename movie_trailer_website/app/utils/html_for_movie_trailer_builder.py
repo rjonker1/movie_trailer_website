@@ -3,7 +3,9 @@ import html_for_movie_trailer
 import views.view_manager
 
 class HtmlForMovieTrailerBuilder(html_for_movie_trailer.HtmlForMovieTrailer):
-    """description of class"""
+    """Reads the html content from HtmlForMovieTrailer class to create the html page to show Movie information in an web browser
+    Takes a list of Movies as an argument. These passed in Movies information will be used to add content to the html page
+    A new html page is created each time the open_movies_page() function is called"""
     def __init__(self, movies):
         html_for_movie_trailer.HtmlForMovieTrailer.__init__(self)
         self.movies = movies
