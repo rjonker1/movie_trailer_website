@@ -1,18 +1,21 @@
-# README #
+# Movie Trailer Website #
 
-### What is this repository for? ###
+* Contributors: Rudi Jonker
+* Requires at least: Python 2.7
+* Requires a web browser
 
-* This repository has a source code used to dispay a list of movies and their trailers on a web page
-* Version 0.1.0
-* Built using Python 2.7
+A simple html page generator to display a list of movies and their respective trailers in a web browser
 
-### How do I get set up? ###
+### Usage ###
 
-The source code is located in a folder called src. 
-The published source code is located in a folder called pub. 
+*	Checkout the MASTER branch
+*	Using python's shell, execute the bootrapper.py file in the pub\movie_web\app folder
 
-To execute the application open the bootsrapper.py file in the pub\movie_web\app folder and execute using a Python shell
+### Installation ###
 
-### Who do I talk to? ###
+*	Git
+	git clone https://github.com/rjonker1/movie_trailer_website.git
+
+### Support ###
 
 * Rudi Jonker (rudi@customapp.co.za)
