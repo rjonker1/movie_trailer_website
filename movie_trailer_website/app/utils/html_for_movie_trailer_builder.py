@@ -20,7 +20,11 @@ class HtmlForMovieTrailerBuilder(html_for_movie_trailer.HtmlForMovieTrailer):
             content += self.movie_tile_content.format(
                 movie_title=movie.title,
                 poster_image_url=movie.poster_image_url,
-                trailer_id=trailer_id)
+                trailer_id=trailer_id,
+                release_year=movie.release_year,
+                rating=movie.rating,
+                storyline=movie.storyline,
+                directed_by=movie.directed_by)
            
         return content
 

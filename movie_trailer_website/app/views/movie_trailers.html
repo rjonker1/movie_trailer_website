@@ -1,79 +1,15 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Movie Trailers</title>
+    <title>Soooper Movies</title>
 
     <!-- Bootstrap 3 -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="../content/css/default.css" />
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-    <style type="text/css" media="screen">
-        body {
-            padding-top: 80px;
-        }
-        #trailer .modal-dialog {
-            margin-top: 200px;
-            width: 640px;
-            height: 480px;
-        }
-        .hanging-close {
-            position: absolute;
-            top: -12px;
-            right: -12px;
-            z-index: 9001;
-        }
-        #trailer-video {
-            width: 100%;
-            height: 100%;
-        }
-        .movie-tile {
-            margin-bottom: 20px;
-            padding-top: 20px;
-        }
-        .movie-tile:hover {
-            background-color: #EEE;
-            cursor: pointer;
-        }
-        .scale-media {
-            padding-bottom: 56.25%;
-            position: relative;
-        }
-        .scale-media iframe {
-            border: none;
-            height: 100%;
-            position: absolute;
-            width: 100%;
-            left: 0;
-            top: 0;
-            background-color: white;
-        }
-    </style>
-    <script type="text/javascript" charset="utf-8">
-        // Pause the video when the modal is closed
-        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
-            // Remove the src so the player itself gets removed, as this is the only
-            // reliable way to ensure the video stops playing in IE
-            $("#trailer-video-container").empty();
-        });
-        // Start playing the video whenever the trailer modal is opened
-        $(document).on('click', '.movie-tile', function (event) {
-            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
-            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
-            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
-              'id': 'trailer-video',
-              'type': 'text-html',
-              'src': sourceUrl,
-              'frameborder': 0
-            }));
-        });
-        // Animate in the movies when the page loads
-        $(document).ready(function () {
-          $('.movie-tile').hide().first().show("fast", function showNext() {
-            $(this).next("div").show("fast", showNext);
-          });
-        });
-    </script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>    
+    <script type="text/javascript" src="../content/js/common.js"></script>
 </head>
 
 <!DOCTYPE html>
@@ -97,7 +33,7 @@
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">Movie Trailers</a>
+            <a class="navbar-brand" href="#">Soooper Movies</a>
           </div>
         </div>
       </div>
@@ -105,18 +41,51 @@
     <div class="container">
       
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="G7fO3bzPeBQ" data-toggle="modal" data-target="#trailer">
-    <img src="http://ia.media-imdb.com/images/M/MV5BMTY3MjM1Mzc4N15BMl5BanBnXkFtZTgwODM0NzAxMDE@._V1_SX640_SY720_.jpg" width="220" height="342">
-    <h2>A Clockwork Orange</h2>
-</div>
-
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="x9f6JaaX7Wg" data-toggle="modal" data-target="#trailer">
-    <img src="http://www.impawards.com/1987/posters/full_metal_jacket.jpg" width="220" height="342">
-    <h2>Full Metal Jacket</h2>
+    <img src="http://mtv.mtvnimages.com/shared/media/images/acovers/standard/dra100/a175/a17588n7cit.jpg" width="220" height="342">
+    <h2>A Clockwork Orange <span class="release-year">(1971)</span></h2>    
+    <h5>Average Rating: <span class="ratings">5</span>/5</h4>    
+    <p class="movie-storyline">In future Britain, charismatic delinquent Alex DeLarge is jailed and volunteers for an experimental aversion therapy developed by the government in an effort to solve society's crime problem - but not all goes according to plan.</p>
+    <h3>Directed By: <span class="directed-by">Stanley Kubrick</span></h2>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="sLpMx8_TYOo" data-toggle="modal" data-target="#trailer">
     <img src="http://www.newslinemagazine.com/wp-content/uploads/2014/10/taxidriver-1976-film-poster.jpg" width="220" height="342">
-    <h2>Taxi Driver</h2>
+    <h2>Taxi Driver <span class="release-year">(1976)</span></h2>    
+    <h5>Average Rating: <span class="ratings">5</span>/5</h4>    
+    <p class="movie-storyline">A mentally unstable Vietnam war veteran works as a night-time taxi driver in New York City where the perceived decadence and sleaze feeds his urge for violent action, attempting to save a preadolescent prostitute in the process.</p>
+    <h3>Directed By: <span class="directed-by">Martin Scorsese</span></h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="R2GKVtWsXKY" data-toggle="modal" data-target="#trailer">
+    <img src="https://folhasdepapel.files.wordpress.com/2009/06/trainspotting.jpg" width="220" height="342">
+    <h2>Trainspotting <span class="release-year">(1996)</span></h2>    
+    <h5>Average Rating: <span class="ratings">5</span>/5</h4>    
+    <p class="movie-storyline">Heroin addict Mark Renton (Ewan McGregor) stumbles through bad ideas and sobriety attempts with his unreliable friends -- Sick Boy (Jonny Lee Miller), Begbie (Robert Carlyle), Spud (Ewen Bremner) and Tommy (Kevin McKidd). He also has an underage girlfriend, Diane (Kelly Macdonald), along for the ride. After cleaning up and moving from Edinburgh to London, Mark finds he can't escape the life he left behind when Begbie shows up at his front door on the lam, and a scheming Sick Boy follows.</p>
+    <h3>Directed By: <span class="directed-by">Danny Boyle</span></h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="lUloT3Dh3-E" data-toggle="modal" data-target="#trailer">
+    <img src="http://static.tvtropes.org/pmwiki/pub/images/Snatch.jpg" width="220" height="342">
+    <h2>Snatch <span class="release-year">(1999)</span></h2>    
+    <h5>Average Rating: <span class="ratings">5</span>/5</h4>    
+    <p class="movie-storyline">Illegal boxing promoter Turkish (Jason Statham) convinces gangster Brick Top (Alan Ford) to offer bets on bare-knuckle boxer Mickey (Brad Pitt) at his bookie business. When Mickey does not throw his first fight as agreed, an infuriated Brick Top demands another match. Meanwhile, gangster Frankie Four Fingers (Benicio Del Toro) comes to place a bet for a friend with Brick Top's bookies, as multiple criminals converge on a stolen diamond that Frankie has come to London to sell</p>
+    <h3>Directed By: <span class="directed-by">Guy Ritchie</span></h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="x9f6JaaX7Wg" data-toggle="modal" data-target="#trailer">
+    <img src="http://www.impawards.com/1987/posters/full_metal_jacket.jpg" width="220" height="342">
+    <h2>Full Metal Jacket <span class="release-year">(1987)</span></h2>    
+    <h5>Average Rating: <span class="ratings">4</span>/5</h4>    
+    <p class="movie-storyline">A pragmatic U.S. Marine observes the dehumanizing effects the U.S.-Vietnam War has on his fellow recruits from their brutal boot camp training to the bloody street fighting in Hue.</p>
+    <h3>Directed By: <span class="directed-by">Francesca Cima, Stanley Kubrick</span></h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="yXkqGVfm1mo" data-toggle="modal" data-target="#trailer">
+    <img src="http://ia.media-imdb.com/images/M/MV5BMTI4NDY3MTYwMV5BMl5BanBnXkFtZTYwNDkyNDg5._V1_SY317_CR5,0,214,317_AL_.jpg" width="220" height="342">
+    <h2>Straw Dogs <span class="release-year">(1971)</span></h2>    
+    <h5>Average Rating: <span class="ratings">4</span>/5</h4>    
+    <p class="movie-storyline">David Sumner (Dustin Hoffman), a mild-mannered academic from the United States, marries Amy (Susan George), an Englishwoman. In order to escape a hectic stateside lifestyle, David and his wife relocate to the small town in rural Cornwall where Amy was raised. There, David is ostracized by the brutish men of the village, including Amy's old flame, Charlie (Del Henney). Eventually the taunts escalate, and two of the locals rape Amy. This sexual assault awakes a shockingly violent side of David.</p>
+    <h3>Directed By: <span class="directed-by">Sam Peckinpah</span></h2>
 </div>
 
     </div>
