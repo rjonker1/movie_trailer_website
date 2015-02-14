@@ -1,29 +1,20 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
-
 ### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* This repository has a source code used to dispay a list of movies and their trailers on a web page
+* Version 0.1.0
+* Built using Python 2.7
 
 ### How do I get set up? ###
 
 * Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
+The source code is located in a folder called src. 
+The published source code is located in a folder called pub. 
+
 * Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
+To execute the application open the bootsrapper.py file in the pub\movie_web\app folder and execute using a Python shell
 
 ### Who do I talk to? ###
 
-* Repo owner or admin
-* Other community or team contact
+* Rudi Jonker (rudi@customapp.co.za)
