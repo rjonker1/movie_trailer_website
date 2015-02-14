@@ -3,7 +3,7 @@ This is the source code used to display movie and their trailers on a movie trai
 
 2. PROJECT OVERVIEW
 
-	2.1 The applicaiton is initialized through the bootstrapper.py file
+	2.1 The applicaiton is initialized through the bootstrapper.py file, located in \movie_web\app\boostrapper.py
 		2.1. The bootstrapper.py file will get the top rated movies from a movie database, insert each movie's details into an html page and then serve the html into a webbrowser.
 	2.2 The Project consists of the following folders:
 
@@ -29,8 +29,3 @@ This is the source code used to display movie and their trailers on a movie trai
 
 3. EXECUITON / RUN
 	3.1 To execute the source code, build the movie trailer html page and serve it to the web browser, you need to run the bootstrapper.py file from the python shell
-	
-
-4. POSSIBLE ISSUES
-	4.1 Path for the movie_trailer.html page in the views folders
-		4.1.1 If debugging in Visual Studio 2013, in the view_manager.py file you might need to change view = os.path.join(dir + "\\",r"views\movie_trailers.html") to view = os.path.join(dir + "\\",r"app\views\movie_trailers.html")
