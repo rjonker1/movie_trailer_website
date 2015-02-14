@@ -8,11 +8,9 @@
 
 ### How do I get set up? ###
 
-* Summary of set up
 The source code is located in a folder called src. 
 The published source code is located in a folder called pub. 
 
-* Deployment instructions
 To execute the application open the bootsrapper.py file in the pub\movie_web\app folder and execute using a Python shell
 
 ### Who do I talk to? ###
